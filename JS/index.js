@@ -55,10 +55,10 @@ function toggleMusic() {
     const audio = document.getElementById("bg-music");
     if (audio.paused) {
         audio.play();
-        musictoggle.src = "../assets/unmute.png";
+        musictoggle.src = "assets/unmute.png";
     } else {
         audio.pause();
-        musictoggle.src = "../assets/mute.png";
+        musictoggle.src = "assets/mute.png";
     }
 }
 
