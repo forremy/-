@@ -1,0 +1,328 @@
+:root {
+    --primary-color: #930058;
+    --secondary-color: #E17BB8;
+    --background-color: #FFA5DB;
+}
+
+@font-face {
+    font-family: 'pixel';
+    src: url('../assets/fonts/pixel.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pixel-bold';
+    src: url('../assets/fonts/pixelbold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background-color);
+    width: 100%;
+    height: 100vh;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: pixel;
+    opacity: .74;
+}
+
+#musictoggle{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    image-rendering: pixelated;
+    cursor: pointer;
+    user-select: none;
+    display: none;
+}
+
+
+
+
+#starttitles{
+    color: var(--primary-color);
+    font-family: pixel-bold;
+    text-align: center;
+    user-select: none;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+#starttitles h1{
+    font-size: 3rem;
+    direction: rtl;
+}
+
+#startbtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#startbtn button{
+    background-image: url(../assets/btn.png);
+    border: none;
+    width: 200px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-family: pixel-bold;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+
+
+#maintitles{
+    color: var(--primary-color);
+    font-family: pixel-bold;
+    text-align: center;
+    user-select: none;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+#maintitles h1{
+    font-size: 3rem;
+    direction: rtl;
+}
+
+#mainbtns{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#mainbtns button{
+    background-image: url(../assets/btn.png);
+    border: none;
+    width: 200px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-family: pixel-bold;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+
+#msgpage{
+    display: flex;
+    text-align: center;
+}
+
+#msgpage h1{
+    color: var(--primary-color);
+    font-family: pixel-bold;
+    text-align: center;
+    user-select: none;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 3rem;
+    direction: rtl;
+}
+
+#scroll{
+    background-image: url(../assets/scroll.png);
+    width: 318px;
+    height: 492px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    opacity: 0.89;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 68px 29px;
+}
+
+#done{
+    background-image: url(../assets/btn2.png);
+    border: none;
+    width: 340px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    background-color: transparent;
+    color: white;
+    font-family: pixel-bold;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: x-large;
+    cursor: pointer;
+}
+
+#msgcontent{
+    text-align: right;
+    direction: rtl;
+    font-family: pixel;
+
+}
+
+#overlay{
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#overlay #ov{
+    background-color: black;
+    opacity: 0.66;
+    width: 100%;
+    height: 100%;
+}
+
+#alert{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 331px;
+    height: 500px;
+    background-image: url(../assets/scroll.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    direction: rtl;
+}
+
+#alert h1{
+    color: var(--primary-color);
+    font-family: pixel-bold;
+    font-size: 3rem;
+}
+
+#alert p{
+    font-family: pixel;
+    font-size: larger;
+}
+
+#hideov{
+    background-image: url(../assets/btn2.png);
+    border: none;
+    width: 242px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    background-color: transparent;
+    color: white;
+    font-family: pixel-bold;
+    font-size: x-large;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+
+
+
+
+#us{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+#us img{
+    width: 200px;
+    image-rendering: pixelated;
+    animation: sway 2s infinite ease-in-out;
+}
+
+.oldmsg-btn {
+    background-image: url(../assets/btn.png);
+    border: none;
+    width: 200px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-family: pixel-bold;
+    font-size: x-large;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#oldmsgpage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#oldmsgpage p{
+    font-family: pixel;
+    direction: rtl;
+    font-size: x-large;
+    text-align: center;
+    width: 70%;
+    margin-bottom: 50px;
+}

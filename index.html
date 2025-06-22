@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title><3</title>
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="assets/sounds/bg.mp3" type="audio/mpeg" />
+    </audio>
+
+    <img draggable="false" src="assets/unmute.png" alt="" id="musictoggle" onclick="toggleMusic()">
+
+    <div id="startpage">
+        <div id="starttitles">
+            <h1>مرحبا ريماس !</h1>
+            <p>HOPE YOU HAVE A GREAT DAY :)</p>
+        </div>
+    
+        <div id="startbtn">
+            <button onclick="start()">ابدأ</button>
+        </div>
+    </div>
+
+    <div id="mainpage">
+        <div id="maintitles">
+            <h1>مرحبا ريماس !</h1>
+            <p>HOPE YOU HAVE A GREAT DAY :)</p>
+        </div>
+    
+        <div id="mainbtns">
+            <button onclick="todaymsg()">عرض رسالة اليوم</button>
+            <button onclick="oldmsg()">الرسائل السابقة</button>
+        </div>
+    </div>
+
+    <div id="msgpage">
+        <h1>رسالة اليوم <span>الأول</span></h1>
+        <div id="scroll">
+            <p id="msgcontent"></p>
+        </div>
+        <button id="done" onclick="tomain()">تمام</button>
+    </div>
+
+    <div id="oldmsgpage">
+        <p>باقي الرسائل بتبين كل يوم لما تفتحي رسالة جديدة :)</p>
+    </div>
+
+    <div id="overlay">
+        <div id="alert">
+            <p>لازم تستني</p>
+            <h1 id="timer">00:00:00</h1>
+            <p>عشان تفتحي الرسالة :)</p>
+            <button onclick="hideoverlay()" id="hideov">تمام</button>
+        </div>
+        <div id="ov"></div>
+    </div>
+    
+    <div id="us">
+        <img src="assets/hellokitty.png" alt="">
+        <img src="assets/chococat.png" alt="">
+    </div>
+    <footer>made with love by hamza :)</footer>
+</body>
+<script src="JS/index.js"></script>
+</html>
